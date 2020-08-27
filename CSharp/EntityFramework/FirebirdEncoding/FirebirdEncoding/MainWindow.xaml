@@ -1,0 +1,27 @@
+﻿<Window x:Class="FirebirdEncoding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirebirdEncoding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400"
+        MinHeight="200" MinWidth="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10">
+            <TextBlock Text="Default:" FontWeight="Bold"/>
+            <TextBlock Name="lblDefault"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="WIN1252:" FontWeight="Bold"/>
+            <TextBlock Name="lblWIN1252"/>
+        </StackPanel>
+        <Button Grid.Row="2" Content="Get Values" Width="100" Height="30" Click="Button_Click"/>
+    </Grid>
+</Window>
