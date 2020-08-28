@@ -23,11 +23,7 @@ namespace FirebirdEncoding
             using (AppDbContext con = new AppDbContext(connectionString))
             {
                 Product p = con.Products.First();
-                lblDefault.Text = p.Name;
-                var win1252 = Encoding.GetEncoding(1252);
-                var utf8 = Encoding.UTF8;
-                lblWIN1252.Text = Encoding.UTF8.GetString(Encoding.Convert(win1252, utf8, win1252.GetBytes(p.Name)));
-                
+                lblText.Text = p.Name;                
             }
         }
     }
